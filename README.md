@@ -29,7 +29,7 @@
 
 `routes/user.py` 内で、星座のリストを定義しました。
   
-### `zodiac_sign` 配列の追加  
+### `zodiac_sign` の追加  
 ![](routes_user.jpg)
 
 ### 説明
