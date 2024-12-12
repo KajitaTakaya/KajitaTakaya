@@ -62,9 +62,7 @@
 
 ### `edit` 関数
 
-```python
-user.zodiac_sign = request.form['zodiac_sign']  # 星座データを更新
-```
+![](def_edit.jpg)
 
 - **`request.form['zodiac_sign']`**:
   - 編集フォームから送信された星座の値を取得します。
