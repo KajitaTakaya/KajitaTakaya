@@ -149,36 +149,6 @@ user.zodiac_sign = request.form['zodiac_sign']  # 星座データを更新
 
 ---
 
-## データベースのマイグレーション
-
-### 方法 1: データベースを再作成
-```bash
-rm my_database.db
-python
->>> from models import User
->>> User.create_table()
-```
-
-- **注意点**: この方法はデータをすべて削除するため、開発環境でのみ使用してください。
-
-### 方法 2: マイグレーションスクリプトの実行
-```python
-from playhouse.migrate import SqliteMigrator, migrate
-from models.db import db
-from models.user import User
-
-migrator = SqliteMigrator(db)
-
-with db.atomic():
-    migrate(
-        migrator.add_column('user', 'zodiac_sign', User.zodiac_sign)
-    )
-```
-
-- **効果**: データを保持したまま、`zodiac_sign` カラムを追加します。
-
----
-
 ## 全体のデータフロー
 
 1. ユーザー追加画面で名前、年齢、星座を入力し、送信。
