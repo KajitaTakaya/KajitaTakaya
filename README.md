@@ -17,9 +17,7 @@
 `models/user.py` に以下の変更を加えました。
 
 ### 変更内容
-```python
-zodiac_sign = CharField()  # 星座フィールド追加
-```
+![](models_user.jpg)
 
 ### 説明
 - **データ型**: `CharField`
@@ -37,13 +35,7 @@ zodiac_sign = CharField()  # 星座フィールド追加
 `routes/user.py` 内で、星座のリストを定義しました。
 
 ### 変更内容
-```python
-ZODIAC_SIGNS = [
-    "牡羊座", "牡牛座", "双子座", "蟹座", "獅子座",
-    "乙女座", "天秤座", "蠍座", "射手座", "山羊座",
-    "水瓶座", "魚座"
-]
-```
+![](routes_user.jpg)
 
 ### 説明
 - **データ形式**: リスト
@@ -58,10 +50,7 @@ ZODIAC_SIGNS = [
 
 ### `add` 関数
 
-```python
-zodiac_sign = request.form['zodiac_sign']  # 星座データを取得
-User.create(name=name, age=age, zodiac_sign=zodiac_sign)
-```
+![](def_add.jpg)
 
 - **`request.form['zodiac_sign']`**:
   - フォームから送信された星座の値を取得します。
