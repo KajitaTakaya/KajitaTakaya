@@ -86,17 +86,7 @@
 
 ### ユーザー編集画面 (`user_edit.html`)
 
-```html
-<label>星座:
-    <select name="zodiac_sign" required>
-        {% for sign in zodiac_signs %}
-        <option value="{{ sign }}" {% if user.zodiac_sign == sign %}selected{% endif %}>
-            {{ sign }}
-        </option>
-        {% endfor %}
-    </select>
-</label><br>
-```
+![](user_edit.html.jpg)
 
 - **機能**:
   - 編集画面で現在選択されている星座を表示し、変更が可能。
@@ -107,26 +97,7 @@
 
 ### ユーザー一覧画面 (`user_list.html`)
 
-```html
-<thead>
-    <tr>
-        <th>&nbsp;</th>
-        <th>名前</th>
-        <th>年齢</th>
-        <th>星座</th>
-    </tr>
-</thead>
-<tbody>
-    {% for user in items %}
-    <tr>
-        <td><a href="{{ url_for('user.edit', user_id=user.id) }}">編集</a></td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.age }}</td>
-        <td>{{ user.zodiac_sign }}</td>
-    </tr>
-    {% endfor %}
-</tbody>
-```
+![](user_list.html.jpg)
 
 - **追加した列**:
   - 星座 (`<th>星座</th>`)
