@@ -74,15 +74,7 @@
 
 ### ユーザー追加画面 (`user_add.html`)
 
-```html
-<label>星座:
-    <select name="zodiac_sign" required>
-        {% for sign in zodiac_signs %}
-        <option value="{{ sign }}">{{ sign }}</option>
-        {% endfor %}
-    </select>
-</label><br>
-```
+![](user_add.html.jpg)
 
 - **`<select>` タグ**:
   - 星座を選択するためのドロップダウンを提供します。
